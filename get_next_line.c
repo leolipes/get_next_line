@@ -6,7 +6,7 @@
 /*   By: leolipes <leolipes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 23:04:13 by leolipes          #+#    #+#             */
-/*   Updated: 2021/09/03 19:07:11 by leolipes         ###   ########.fr       */
+/*   Updated: 2021/09/04 00:08:57 by leolipes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ char	*get_next_line(int fd)
 	while (temp[aux] != '\n' && temp[aux] != '\0')
 		aux++;
 	backup = ft_substr(temp, aux + 1, -1);
-	if (backup[0] == '\0')
+	if (*backup == '\0')
 	{
 		free(backup);
 		backup = 0;
