@@ -6,7 +6,7 @@
 /*   By: leolipes <leolipes@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 23:04:13 by leolipes          #+#    #+#             */
-/*   Updated: 2021/09/04 00:08:57 by leolipes         ###   ########.fr       */
+/*   Updated: 2021/09/04 14:25:01 by leolipes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,9 +69,9 @@ char	*get_next_line(int fd)
 	char		*temp;
 	size_t		aux;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 256)
-		return (NULL);
 	buf_read = alloc_buf();
+	if (!buf_read)
+		return (NULL);
 	if (backup)
 		temp = backup;
 	else
